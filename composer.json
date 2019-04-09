@@ -5,7 +5,7 @@
 	"type": "project",
 	"license": ["MIT", "BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"require": {
-		"php": ">= 7.2",
+		"php": ">= 7.1",
 		"nette/application": "^3.0",
 		"nette/bootstrap": "^3.0",
 		"nette/caching": "^3.0",
@@ -19,18 +19,19 @@
 		"nette/security": "^3.0",
 		"nette/utils": "^3.0",
 		"latte/latte": "^2.5",
-		"tracy/tracy": "^2.6"
+		"tracy/tracy": "^2.6",
+		"contributte/console": "^0.5.0"
 	},
 	"require-dev": {
-		"nette/tester": "^2.0"
+		"nette/tester": "^2.0",
+		"jakub-onderka/php-parallel-lint": "^1.0",
+		"phpstan/phpstan": "^0.11.5",
+		"phpstan/phpstan-nette": "^0.11.0",
+		"phpstan/phpstan-doctrine": "^0.11.2"
 	},
 	"autoload": {
 		"classmap": ["app/Booting.php"]
 	},
-	"minimum-stability": "stable",
-	"config": {
-		"platform": {
-			"php": "7.1"
-		}
-	}
+	"minimum-stability": "dev",
+  	"prefer-stable":  true
 }
