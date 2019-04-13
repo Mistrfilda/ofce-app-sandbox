@@ -36,6 +36,11 @@
 			"App\\": "src"
 	  	}
 	},
+  	"autoload-dev": {
+		"psr-4": {
+	  		"App\\": "src"
+		}
+  	},
   	"scripts": {
 	  "stan": "vendor/bin/phpstan analyse -l 7 -c phpstan.neon src/",
 	  "lint": "vendor/bin/parallel-lint --colors src/"
