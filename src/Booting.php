@@ -24,8 +24,8 @@ class Booting
 
 		$configurator->addConfig(__DIR__ . '/../config/config.neon');
 
-		if (is_file(__DIR__ . '/../config/local.neon')) {
-			$configurator->addConfig(__DIR__ . '/../config/local.neon');
+		if (is_file(__DIR__ . '/../config/config.local.neon')) {
+			$configurator->addConfig(__DIR__ . '/../config/config.local.neon');
 		}
 
 		return $configurator;

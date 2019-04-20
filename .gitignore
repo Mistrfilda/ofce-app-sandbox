@@ -1,4 +1,5 @@
 vendor/*
 app/config/config.local.neon
+config/config.local.neon
 
 .idea/

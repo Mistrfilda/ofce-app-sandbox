@@ -7,10 +7,32 @@ application:
 		*: ['App', '*', '*\UI\*Presenter']
 		Error: ['App\Error\UI', '*', '*Presenter']
 
+extensions:
+	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+	dbal: Nettrine\DBAL\DI\DbalExtension
+	dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
+	orm: Nettrine\ORM\DI\OrmExtension
+	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
+	orm.console: Nettrine\ORM\DI\OrmConsoleExtension
+	migrations: Nettrine\Migrations\DI\MigrationsExtension
 
 session:
 	expiration: 14 days
 
+dbal:
+	connection:
+		host: %database.host%
+		user: %database.user%
+		password: %database.password%
+		dbname: %database.dbname%
+
+orm.annotations:
+	paths:
+		- %appDir%
+
+console:
+    url: http://localhost/ofce-app-sandbox/www
+    catchExceptions: false
 
 services:
 	router: App\Router\RouterFactory::createRouter
