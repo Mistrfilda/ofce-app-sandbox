@@ -14,7 +14,6 @@ use Nette\Http;
 use Nette\SmartObject;
 use Tracy\ILogger;
 
-
 final class ErrorPresenter implements IPresenter
 {
 	use SmartObject;
@@ -22,12 +21,10 @@ final class ErrorPresenter implements IPresenter
 	/** @var ILogger */
 	private $logger;
 
-
 	public function __construct(ILogger $logger)
 	{
 		$this->logger = $logger;
 	}
-
 
 	public function run(Request $request): IResponse
 	{

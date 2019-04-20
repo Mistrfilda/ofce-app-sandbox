@@ -28,7 +28,8 @@
 		"phpstan/phpstan": "^0.11.5",
 		"phpstan/phpstan-nette": "^0.11.0",
 		"phpstan/phpstan-doctrine": "^0.11.2",
-	  	"phpstan/phpstan-strict-rules": "^0.11.0"
+	  	"phpstan/phpstan-strict-rules": "^0.11.0",
+		"symplify/easy-coding-standard": "^5.4"
 	},
 	"autoload": {
 		"classmap": ["src/Booting.php"],
@@ -43,7 +44,9 @@
   	},
   	"scripts": {
 	  "stan": "vendor/bin/phpstan analyse -l 7 -c phpstan.neon src",
-	  "lint": "vendor/bin/parallel-lint --colors src/"
+	  "lint": "vendor/bin/parallel-lint --colors src/",
+	  "sniffer": "vendor/bin/ecs check src",
+	  "fix": "vendor/bin/ecs check src --fix"
 	},
 	"minimum-stability": "dev",
   	"prefer-stable":  true

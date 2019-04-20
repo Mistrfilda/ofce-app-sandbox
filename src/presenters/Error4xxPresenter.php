@@ -9,22 +9,20 @@ use Nette\Application\Request;
 use Nette\Application\UI\Presenter;
 use Nette\Bridges\ApplicationLatte\Template;
 
-
 final class Error4xxPresenter extends Presenter
 {
 	public function startup(): void
 	{
 		parent::startup();
-		if ($this->getRequest() !== null && !$this->getRequest()->isMethod(Request::FORWARD)) {
+		if ($this->getRequest() !== null && ! $this->getRequest()->isMethod(Request::FORWARD)) {
 			$this->error();
 		}
 	}
 
-
 	public function renderDefault(BadRequestException $exception): void
 	{
 		$template = $this->getTemplate();
-		if (!$template instanceof Template) {
+		if (! $template instanceof Template) {
 			throw new BadRequestException();
 		}
 
