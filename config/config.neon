@@ -2,7 +2,6 @@ parameters:
 
 
 application:
-	catchExceptions: true
 	errorPresenter: Error:Error
 	mapping:
 		*: ['App', '*', '*\UI\*Presenter']
