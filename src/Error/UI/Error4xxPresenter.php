@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Presenters;
+namespace App\Error\UI;
 
 use Nette\Application\BadRequestException;
 use Nette\Application\Request;
@@ -27,7 +27,7 @@ final class Error4xxPresenter extends Presenter
 		}
 
 		// load template 403.latte or 404.latte or ... 4xx.latte
-		$file = __DIR__ . "/templates/Error/{$exception->getCode()}.latte";
-		$template->setFile(is_file($file) ? $file : __DIR__ . '/templates/Error/4xx.latte');
+		$file = __DIR__ . "/templates/{$exception->getCode()}.latte";
+		$template->setFile(is_file($file) ? $file : __DIR__ . '/templates/4xx.latte');
 	}
 }
