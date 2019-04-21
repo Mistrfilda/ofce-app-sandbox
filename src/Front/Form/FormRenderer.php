@@ -78,7 +78,7 @@ class FormRenderer extends DefaultFormRenderer
 			} elseif ($control instanceof Controls\Checkbox || $control instanceof Controls\CheckboxList || $control instanceof Controls\RadioList) {
 				$control->getControlPrototype()->addClass('form-check-input');
 
-				$control->getSeparatorPrototype()->setName('div')->addClass('form-check ')->class('form-check-inline', $this->layout === FormLayout::INLINE);
+				$control->getSeparatorPrototype()->setName('div')->addClass('form-check i-checks')->class('form-check-inline', $this->layout === FormLayout::INLINE);
 
 				if ($control instanceof Controls\Checkbox) {
 					$control->getLabelPrototype()->addClass('form-check-label');

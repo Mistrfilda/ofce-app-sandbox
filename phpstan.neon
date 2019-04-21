@@ -5,8 +5,6 @@ includes:
 	- vendor/phpstan/phpstan-doctrine/extension.neon
 
 parameters:
-	ignoreErrors:
-		- '#Property [a-zA-Z0-9\\_]+::\$id has no typehint specified#'
 
 	excludes_analyse:
 		- %rootDir%/../../../src/Front/Form/Input/DatetimePicker.php
