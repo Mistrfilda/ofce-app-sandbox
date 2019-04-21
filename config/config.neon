@@ -55,3 +55,14 @@ services:
 
 	#FORMS
 	- App\Front\Form\FormFactory
+
+	#USER
+	- App\User\UserRepository(App\User\User)
+	- App\User\UserFacade
+	- App\User\UserAuthenticator
+
+	- App\Notification\NotificationRepository(App\Notification\Notification)
+	- App\Right\RightRepository(App\Right\Right)
+
+	#sign
+	- App\Sign\UI\Form\SignFormFactory

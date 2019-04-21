@@ -12,9 +12,4 @@ class FormFactory
 		$form->setRenderer(new FormRenderer());
 		return $form;
 	}
-
-	public function createInlineForm(): Form
-	{
-		return new Form();
-	}
 }

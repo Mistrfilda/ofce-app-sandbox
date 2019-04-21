@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\User\UI;
+namespace App\Right\UI;
 
 use App\Front\UI\SecurePresenter;
 
-class UserPresenter extends SecurePresenter
+class RightPresenter extends SecurePresenter
 {
 }

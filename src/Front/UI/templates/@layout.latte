@@ -45,59 +45,6 @@
 				{foreach $menu as $menuItem}
 					{include menu.latte, 'item' => $menuItem}
 				{/foreach}
-
-				<li>
-					<a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
-				</li>
-
-				<li class="active">
-					<a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span
-								class="fa arrow"></span></a>
-					<ul class="nav nav-second-level collapse">
-						<li><a href="table_basic.html">Static Tables</a></li>
-						<li><a href="table_data_tables.html">Data Tables</a></li>
-						<li class="active"><a href="table_foo_table.html">Foo Tables</a></li>
-						<li><a href="jq_grid.html">jqGrid</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Menu Levels </span><span
-								class="fa arrow"></span></a>
-					<ul class="nav nav-second-level collapse">
-						<li>
-							<a href="#">Third Level <span class="fa arrow"></span></a>
-							<ul class="nav nav-third-level">
-								<li>
-									<a href="#">Third Level Item</a>
-								</li>
-								<li>
-									<a href="#">Third Level Item</a>
-								</li>
-								<li>
-									<a href="#">Third Level Item</a>
-								</li>
-
-							</ul>
-						</li>
-						<li><a href="#">Second Level Item</a></li>
-						<li>
-							<a href="#">Second Level Item</a></li>
-						<li>
-							<a href="#">Second Level Item</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="css_animation.html"><i class="fa fa-magic"></i> <span
-								class="nav-label">CSS Animations </span><span
-								class="label label-info float-right">62</span></a>
-				</li>
-				<li class="landing_link">
-					<a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span>
-						<span class="label label-warning float-right">NEW</span></a>
-				</li>
-				<li class="special_link">
-					<a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
-				</li>
 			</ul>
 
 		</div>
@@ -279,6 +226,7 @@
 
 <!-- iCheck -->
 <script src="{$basePath}/assets/inspinia/js/plugins/iCheck/icheck.min.js"></script>
+<script src="{$basePath}/assets/custom/js/bootstrap-notify.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -288,6 +236,21 @@
         });
     });
 </script>
+
+{foreach $flashes as $flash}
+	<script>
+        $.notify({
+            message: {$flash->message}
+        }, {
+            // settings
+            type: {$flash->type},
+            placement: {
+                from: "top",
+                align: "center"
+            }
+        });
+	</script>
+{/foreach}
 
 </body>
 </html>
