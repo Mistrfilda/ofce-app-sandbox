@@ -42,3 +42,6 @@ console:
 
 services:
 	router: App\Router\RouterFactory::createRouter
+
+	#FORMS
+	- App\Front\Form\FormFactory

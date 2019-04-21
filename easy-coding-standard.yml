@@ -15,23 +15,6 @@ services:
   SlevomatCodingStandard\Sniffs\Classes\SuperfluousAbstractClassNamingSniff:
   SlevomatCodingStandard\Sniffs\Classes\SuperfluousInterfaceNamingSniff:
   SlevomatCodingStandard\Sniffs\Namespaces\RequireOneNamespaceInFileSniff:
-  SlevomatCodingStandard\Sniffs\Namespaces\NamespaceDeclarationSniff:
-  SlevomatCodingStandard\Sniffs\Namespaces\NamespaceSpacingSniff:
-    linesCountBeforeNamespace: 1
-    linesCountAfterNamespace: 1
-  SlevomatCodingStandard\Sniffs\Namespaces\UseSpacingSniff:
-    linesCountBeforeFirstUse: 1
-    linesCountBetweenUseTypes: 1
-    linesCountAfterLastUse: 1
-  SlevomatCodingStandard\Sniffs\TypeHints\LongTypeHintsSniff:
-  SlevomatCodingStandard\Sniffs\PHP\TypeCastSniff:
-  SlevomatCodingStandard\Sniffs\Files\TypeNameMatchesFileNameSniff:
-    rootNamespaces:
-      src: App
-  SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff:
-    searchAnnotations: true
-  SlevomatCodingStandard\Sniffs\Namespaces\UseDoesNotStartWithBackslashSniff:
-  SlevomatCodingStandard\Sniffs\Commenting\RequireOneLinePropertyDocCommentSniff:
 
   #PSR12
   PhpCsFixer\Fixer\CastNotation\LowercaseCastFixer: ~
@@ -70,6 +53,23 @@ services:
   PhpCsFixer\Fixer\ArrayNotation\NoWhitespaceBeforeCommaInArrayFixer:
   PhpCsFixer\Fixer\ArrayNotation\WhitespaceAfterCommaInArrayFixer:
 
+  SlevomatCodingStandard\Sniffs\Namespaces\NamespaceDeclarationSniff:
+  SlevomatCodingStandard\Sniffs\Namespaces\NamespaceSpacingSniff:
+    linesCountBeforeNamespace: 1
+    linesCountAfterNamespace: 1
+  SlevomatCodingStandard\Sniffs\Namespaces\UseSpacingSniff:
+    linesCountBeforeFirstUse: 1
+    linesCountBetweenUseTypes: 1
+    linesCountAfterLastUse: 1
+  SlevomatCodingStandard\Sniffs\TypeHints\LongTypeHintsSniff:
+  SlevomatCodingStandard\Sniffs\PHP\TypeCastSniff:
+  SlevomatCodingStandard\Sniffs\Files\TypeNameMatchesFileNameSniff:
+    rootNamespaces:
+      src: App
+  SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff:
+    searchAnnotations: true
+  SlevomatCodingStandard\Sniffs\Namespaces\UseDoesNotStartWithBackslashSniff:
+  SlevomatCodingStandard\Sniffs\Commenting\RequireOneLinePropertyDocCommentSniff:
 
 parameters:
   indentation: 'tab'
@@ -77,6 +77,9 @@ parameters:
 
   skip:
     PhpCsFixer\Fixer\Import\SingleImportPerStatementFixer: ~
+
+  exclude_files:
+    - src/Front/Form/Input/DatetimePicker.php
 
   exclude_checkers:
     - PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer
