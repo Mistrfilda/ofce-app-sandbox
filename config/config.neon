@@ -26,6 +26,12 @@ dbal:
 		password: %database.password%
 		dbname: %database.dbname%
 
+migrations:
+    table: doctrine_migrations
+    column: version
+    directory: %appDir%/../migrations
+    namespace: Migrations
+
 orm.annotations:
 	paths:
 		- %appDir%

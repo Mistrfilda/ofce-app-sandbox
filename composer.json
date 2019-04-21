@@ -52,7 +52,8 @@
 	  "stan": "vendor/bin/phpstan analyse -l 7 -c phpstan.neon src --ansi",
 	  "lint": "vendor/bin/parallel-lint --colors src/",
 	  "sniffer": "vendor/bin/ecs check src --ansi",
-	  "fix": "vendor/bin/ecs check src --fix --ansi"
+	  "fix": "vendor/bin/ecs check src --fix --ansi",
+	  "build-all": "composer lint && composer stan && composer sniffer"
 	},
 	"minimum-stability": "dev",
   	"prefer-stable":  true

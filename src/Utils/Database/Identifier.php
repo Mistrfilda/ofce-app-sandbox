@@ -9,10 +9,10 @@ use Doctrine\ORM\Mapping as ORM;
 trait Identifier
 {
 	/**
-	 * @var int $id
-	 * @ORM\Id
+	 * @ORM\Id()
 	 * @ORM\Column(type="integer")
-	 * @ORM\GeneratedValue
+	 * @ORM\GeneratedValue()
+	 * @var int
 	 */
 	private $id;
 

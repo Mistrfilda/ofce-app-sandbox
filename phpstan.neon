@@ -2,4 +2,8 @@ includes:
 	- vendor/phpstan/phpstan-strict-rules/rules.neon
 	- vendor/phpstan/phpstan-nette/extension.neon
 	- vendor/phpstan/phpstan-nette/rules.neon
-	#- vendor/phpstan/phpstan-doctrine/extension.neon
+	- vendor/phpstan/phpstan-doctrine/extension.neon
+
+parameters:
+	ignoreErrors:
+		- '#Property [a-zA-Z0-9\\_]+::\$id has no typehint specified#'
