@@ -1,0 +1,26 @@
+{block menu}
+	{default $level = 1}
+	<li n:class="$presenter->isMenuLinkActive($item->getActiveLinks()) ? active">
+		{if $item->isNested()}
+			<a href="#" n:class="$item->getActiveLinks() ? active">
+				<i class="fa fa-{$item->getIcon()}"></i>
+				<span class="nav-label">{$item->getLabel()}</span><span class="fa arrow"></span>
+			</a>
+			<ul n:class="nav, collapse, $level === 2 ? nav-second-level, $level === 3 ? nav-third-level">
+				<li n:class="$presenter->isLinkCurrent($item->getLink()) ? active">
+					<a n:href="$item->getLink()" n:class="$presenter->isLinkCurrent($item->getLink()) ? active">
+						<span class="nav-label">{$item->getLabel()}</span>
+					</a>
+				</li>
+				{foreach $item->getChildrens() as $children}
+					{include this, 'item' => $children, 'level' => $level + 1}
+				{/foreach}
+			</ul>
+		{else}
+			<a n:href="$item->getLink()" n:class="$presenter->isLinkCurrent($item->getLink()) ? active">
+				<i class="fa fa-{$item->getIcon()}"></i>
+				<span class="nav-label">{$item->getLabel()}</span>
+			</a>
+		{/if}
+	</li>
+{/block}

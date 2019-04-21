@@ -32,9 +32,19 @@ migrations:
     directory: %appDir%/../migrations
     namespace: Migrations
 
+decorator:
+	App\Front\Control\BaseControl:
+		inject: true
+	App\Front\Form\BaseForm:
+		inject: true
+
 orm.annotations:
 	paths:
 		- %appDir%
+
+tracy:
+	showLocation: true
+	maxDepth: 4
 
 console:
     url: http://localhost/ofce-app-sandbox/www

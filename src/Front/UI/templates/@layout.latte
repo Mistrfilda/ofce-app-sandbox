@@ -42,6 +42,10 @@
 					</div>
 				</li>
 
+				{foreach $menu as $menuItem}
+					{include menu.latte, 'item' => $menuItem}
+				{/foreach}
+
 				<li>
 					<a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
 				</li>
