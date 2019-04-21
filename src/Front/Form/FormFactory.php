@@ -8,6 +8,13 @@ class FormFactory
 {
 	public function createForm(): Form
 	{
+		$form = new Form();
+		$form->setRenderer(new FormRenderer());
+		return $form;
+	}
+
+	public function createInlineForm(): Form
+	{
 		return new Form();
 	}
 }
