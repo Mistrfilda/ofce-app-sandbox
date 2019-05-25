@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types = 1);
-
+declare(strict_types=1);
 
 namespace App\User;
-
 
 use App\User\Exception\UserNotFoundException;
 use Nette\Security\AuthenticationException;
@@ -12,7 +10,6 @@ use Nette\Security\IAuthenticator;
 use Nette\Security\Identity;
 use Nette\Security\IIdentity;
 use Nette\Security\Passwords;
-
 
 class UserAuthenticator implements IAuthenticator
 {
@@ -42,7 +39,7 @@ class UserAuthenticator implements IAuthenticator
 			throw new AuthenticationException('User not found');
 		}
 
-		if (!$this->passwords->verify($password, $user->getPassword())) {
+		if (! $this->passwords->verify($password, $user->getPassword())) {
 			throw new AuthenticationException('Invalid password');
 		}
 

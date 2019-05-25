@@ -1,16 +1,13 @@
 <?php
 
-declare(strict_types = 1);
-
+declare(strict_types=1);
 
 namespace App\Notification;
-
 
 use App\User\User;
 use App\Utils\Database\Entity;
 use App\Utils\Database\Identifier;
 use Doctrine\ORM\Mapping as ORM;
-
 
 /**
  * @ORM\Entity

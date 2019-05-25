@@ -1,15 +1,12 @@
 <?php
 
-declare(strict_types = 1);
-
+declare(strict_types=1);
 
 namespace App\Sign\UI;
-
 
 use App\Front\Form\Form;
 use App\Front\UI\BasePresenter;
 use App\Sign\UI\Form\SignFormFactory;
-
 
 class SignPresenter extends BasePresenter
 {
@@ -24,12 +21,11 @@ class SignPresenter extends BasePresenter
 
 	public function createComponentLoginForm(): Form
 	{
-		$onSuccess = function() {
+		$onSuccess = function (): void {
 			$this->flashMessage('Successully	 logged in');
 			$this->redirect('Homepage:default');
 		};
 
 		return $this->signFormFactory->create($onSuccess);
 	}
-
 }

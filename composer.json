@@ -24,7 +24,7 @@
 	  	"nettrine/orm": "dev-master",
 	  	"nettrine/dbal": "dev-master as 0.3.0",
 		"nettrine/migrations": "dev-next",
-	  	"ublaboo/datagrid": "^6.0.0"
+	  	"ublaboo/datagrid": "^6.0"
 	},
 	"require-dev": {
 		"nette/tester": "^2.0",

@@ -9,7 +9,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 
-
 abstract class BaseRepository
 {
 	/** @var EntityManager */
@@ -24,5 +23,5 @@ abstract class BaseRepository
 		$this->doctrineRepository = $entityManager->getRepository($class);
 	}
 
-	public abstract function createQueryBuilder(): QueryBuilder;
+	abstract public function createQueryBuilder(): QueryBuilder;
 }

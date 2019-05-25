@@ -27,7 +27,7 @@ class Right implements Entity
 	public const ALL_RIGHTS = [
 		self::ALL,
 		self::USERS,
-		self::RIGHTS
+		self::RIGHTS,
 	];
 
 	/**

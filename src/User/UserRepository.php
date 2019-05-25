@@ -9,7 +9,6 @@ use App\User\Exception\UserNotFoundException;
 use Doctrine\ORM\NoResultException;
 use Doctrine\ORM\QueryBuilder;
 
-
 class UserRepository extends BaseRepository
 {
 	public function createQueryBuilder(): QueryBuilder

@@ -6,9 +6,7 @@ namespace App\User;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
-use Nette\Security\Passwords;
 use Nette\Security\User as NetteUser;
-
 
 class UserFacade
 {
@@ -25,8 +23,7 @@ class UserFacade
 		EntityManagerInterface $entityManager,
 		UserRepository $userRepository,
 		NetteUser $netteUser
-	)
-	{
+	) {
 		$this->entityManager = $entityManager;
 		$this->userRepository = $userRepository;
 		$this->netteUser = $netteUser;

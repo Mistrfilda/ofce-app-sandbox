@@ -56,6 +56,9 @@ services:
 	#FORMS
 	- App\Front\Form\FormFactory
 
+	#GRIDS
+	- App\Front\Datagrid\DatagridFactory
+
 	#USER
 	- App\User\UserRepository(App\User\User)
 	- App\User\UserFacade

@@ -1,16 +1,13 @@
 <?php
 
-declare(strict_types = 1);
-
+declare(strict_types=1);
 
 namespace App\Sign\UI\Form;
-
 
 use App\Front\Form\BaseForm;
 use App\Front\Form\Form;
 use Nette\Security\AuthenticationException;
 use Nette\Security\User;
-
 
 class SignFormFactory extends BaseForm
 {
@@ -31,7 +28,7 @@ class SignFormFactory extends BaseForm
 
 		$form->addPassword('password', 'Password')->setRequired();
 
-		$form->onSuccess[] = function (Form $form, SignDTO $signDTO) use ($onSuccess) {
+		$form->onSuccess[] = function (Form $form, SignDTO $signDTO) use ($onSuccess): void {
 			$this->processSignForm($form, $signDTO, $onSuccess);
 		};
 
