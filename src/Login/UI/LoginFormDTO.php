@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Sign\UI\Form;
+namespace App\Login\UI;
 
 use Nette\SmartObject;
 
-class SignDTO
+class LoginFormDTO
 {
 	use SmartObject;
 
 	/** @var string */
-	public $username;
+	public $email;
 
 	/** @var string */
 	public $password;

@@ -26,7 +26,7 @@ class UserAuthenticator implements IAuthenticator
 	}
 
 	/**
-	 * @param string[] $credentials
+	 * @param mixed[] $credentials
 	 * @return IIdentity
 	 */
 	public function authenticate(array $credentials): IIdentity

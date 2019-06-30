@@ -5,6 +5,8 @@ includes:
 	- vendor/phpstan/phpstan-doctrine/extension.neon
 
 parameters:
+	ignoreErrors:
+		- '#Parameter \#2 $destination of method Nette\\Application\\UI\\Component::redirect() expects string|null, array<string, string> given#'
 
 	excludes_analyse:
 		- %rootDir%/../../../src/Front/Form/Input/DatetimePicker.php

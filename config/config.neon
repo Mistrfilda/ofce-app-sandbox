@@ -9,12 +9,14 @@ application:
 
 extensions:
 	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+	console.security: Contributte\Console\Extra\DI\SecurityConsoleExtension
 	dbal: Nettrine\DBAL\DI\DbalExtension
 	dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
 	orm: Nettrine\ORM\DI\OrmExtension
 	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
 	orm.console: Nettrine\ORM\DI\OrmConsoleExtension
 	migrations: Nettrine\Migrations\DI\MigrationsExtension
+
 
 session:
 	expiration: 14 days
@@ -36,6 +38,12 @@ decorator:
 	App\Front\Control\BaseControl:
 		inject: true
 	App\Front\Form\BaseForm:
+		inject: true
+	App\Front\Datagrid\BaseDatagrid:
+		inject: true
+	App\Front\UI\BasePresenter:
+		inject: true
+	App\Front\UI\SecurePresenter:
 		inject: true
 
 orm.annotations:
@@ -63,9 +71,12 @@ services:
 	- App\User\UserRepository(App\User\User)
 	- App\User\UserFacade
 	- App\User\UserAuthenticator
+	- App\User\CurrentUserGetter
+	- App\User\UI\Grid\UserGridFactory
 
 	- App\Notification\NotificationRepository(App\Notification\Notification)
 	- App\Right\RightRepository(App\Right\Right)
 
 	#sign
-	- App\Sign\UI\Form\SignFormFactory
+	- App\Login\UI\LoginFormFactory
+
