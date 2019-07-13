@@ -3351,16 +3351,16 @@
         },
         {
             "name": "ublaboo/datagrid",
-            "version": "v6.1.1",
+            "version": "v6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/datagrid.git",
-                "reference": "b31073243189ecbc3cc4071e2b6abf2b7bbff998"
+                "reference": "4b2165541e720c457fd3c27ad1d83e45c0bf5ca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/datagrid/zipball/b31073243189ecbc3cc4071e2b6abf2b7bbff998",
-                "reference": "b31073243189ecbc3cc4071e2b6abf2b7bbff998",
+                "url": "https://api.github.com/repos/contributte/datagrid/zipball/4b2165541e720c457fd3c27ad1d83e45c0bf5ca9",
+                "reference": "4b2165541e720c457fd3c27ad1d83e45c0bf5ca9",
                 "shasum": ""
             },
             "require": {
@@ -3413,7 +3413,7 @@
                 "grid",
                 "nette"
             ],
-            "time": "2019-06-12T22:16:43+00:00"
+            "time": "2019-07-05T07:21:13+00:00"
         },
         {
             "name": "zendframework/zend-code",
