@@ -2293,16 +2293,16 @@
         },
         {
             "name": "nette/security",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/security.git",
-                "reference": "55b6f3e7e3defc8e4f1f78c947f53185c51d6147"
+                "reference": "d4525fe0bc50f8edd96ffad0c958fb7f657aa1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/security/zipball/55b6f3e7e3defc8e4f1f78c947f53185c51d6147",
-                "reference": "55b6f3e7e3defc8e4f1f78c947f53185c51d6147",
+                "url": "https://api.github.com/repos/nette/security/zipball/d4525fe0bc50f8edd96ffad0c958fb7f657aa1d9",
+                "reference": "d4525fe0bc50f8edd96ffad0c958fb7f657aa1d9",
                 "shasum": ""
             },
             "require": {
@@ -2310,7 +2310,7 @@
                 "php": ">=7.1"
             },
             "conflict": {
-                "nette/nette": "<2.2"
+                "nette/di": "<3.0-stable"
             },
             "require-dev": {
                 "nette/di": "^3.0.0",
@@ -2345,7 +2345,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "? Nette Security: provides authentication, authorization and a role-based access control management via ACL (Access Control List)",
+            "description": "🔑 Nette Security: provides authentication, authorization and a role-based access control management via ACL (Access Control List)",
             "homepage": "https://nette.org",
             "keywords": [
                 "Authentication",
@@ -2353,7 +2353,7 @@
                 "authorization",
                 "nette"
             ],
-            "time": "2019-02-20T06:38:20+00:00"
+            "time": "2019-04-14T20:36:23+00:00"
         },
         {
             "name": "nette/utils",
