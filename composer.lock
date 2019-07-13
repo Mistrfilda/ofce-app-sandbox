@@ -1857,16 +1857,16 @@
         },
         {
             "name": "nette/http",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/http.git",
-                "reference": "2fa91a76583c3cb3e7d1a51c501c5653a6a11f8a"
+                "reference": "96d8a7e05e41af89569ddf8ad662c27fcf1a9a9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/http/zipball/2fa91a76583c3cb3e7d1a51c501c5653a6a11f8a",
-                "reference": "2fa91a76583c3cb3e7d1a51c501c5653a6a11f8a",
+                "url": "https://api.github.com/repos/nette/http/zipball/96d8a7e05e41af89569ddf8ad662c27fcf1a9a9b",
+                "reference": "96d8a7e05e41af89569ddf8ad662c27fcf1a9a9b",
                 "shasum": ""
             },
             "require": {
@@ -1874,7 +1874,7 @@
                 "php": ">=7.1"
             },
             "conflict": {
-                "nette/di": "<3.0"
+                "nette/di": "<3.0.0-stable"
             },
             "require-dev": {
                 "nette/di": "^3.0",
@@ -1925,7 +1925,7 @@
                 "session",
                 "url"
             ],
-            "time": "2019-04-03T11:57:10+00:00"
+            "time": "2019-07-08T20:28:51+00:00"
         },
         {
             "name": "nette/mail",
@@ -2973,7 +2973,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
