@@ -6,7 +6,8 @@ includes:
 
 parameters:
 	ignoreErrors:
-		- '#Parameter \#2 $destination of method Nette\\Application\\UI\\Component::redirect() expects string|null, array<string, string> given#'
+#		- '#Parameter \#2 $destination of method Nette\\Application\\UI\\Component::redirect() expects string|null, array<string, string> given#'
+		- '#Array \(array\<callable\(Nette\\Forms\\Form\, mixed\)\: void\>\) does not accept Closure\(App\\Front\\Form\\Form, [a-zA-Z0-9\\_]+\): void#'
 
 	excludes_analyse:
 		- %rootDir%/../../../src/Front/Form/Input/DatetimePicker.php

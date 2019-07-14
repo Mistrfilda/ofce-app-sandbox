@@ -16,11 +16,12 @@
 
 	<link href="{$basePath}/assets/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
 
-	{* Datagrid *}
+    {* Datagrid *}
 	<link rel="stylesheet" type="text/css" href="{$basePath}/assets/custom/datagrid/datagrid.css">
 	<link rel="stylesheet" type="text/css" href="{$basePath}/assets/custom/datagrid/datagrid-spinners.css">
 	<link rel="stylesheet" type="text/css" href="{$basePath}/assets/custom/bootstrap-select/bootstrap-select.css">
-	<link rel="stylesheet" type="text/css" href="{$basePath}/assets/custom/bootstrap-datepicker/bootstrap-datepicker3.css">
+	<link rel="stylesheet" type="text/css"
+		  href="{$basePath}/assets/custom/bootstrap-datepicker/bootstrap-datepicker3.css">
 </head>
 
 <body>
@@ -32,8 +33,7 @@
 				<li class="nav-header">
 					<div class="dropdown profile-element">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-							<span class="block m-t-xs font-bold">David Williams</span>
-							<span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+							<span class="block m-t-xs font-bold">{$loggedUser->getName()} <b class="caret"></b></span>
 						</a>
 						<ul class="dropdown-menu animated fadeInRight m-t-xs">
 							<li><a class="dropdown-item" href="profile.html">Profile</a></li>
@@ -48,9 +48,9 @@
 					</div>
 				</li>
 
-				{foreach $menu as $menuItem}
-					{include menu.latte, 'item' => $menuItem}
-				{/foreach}
+                {foreach $menu as $menuItem}
+                    {include menu.latte, 'item' => $menuItem}
+                {/foreach}
 			</ul>
 
 		</div>
@@ -183,25 +183,27 @@
 		</div>
 		<div class="row wrapper border-bottom white-bg page-heading">
 			<div class="col-sm-4">
-				<h2>This is main title</h2>
+                {var $pageNavigation = $presenter->getNavigation()}
+				<h2>{$pageNavigation->getTitle()}</h2>
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item">
-						<a href="index.html">This is</a>
-					</li>
-					<li class="breadcrumb-item active">
-						<strong>Breadcrumb</strong>
-					</li>
+                    {foreach $pageNavigation->getBreadcrumbs() as $breadcrumb}
+						<li n:class="breadcrumb-item, $iterator->isLast() ? active">
+							<a n:href="$breadcrumb->getLink()"><strong>{$breadcrumb->getText()}</strong></a>
+						</li>
+                    {/foreach}
 				</ol>
 			</div>
 			<div class="col-sm-8">
 				<div class="title-action">
-					<a href="" class="btn btn-primary">This is action area</a>
+					{ifset actionArea}
+						{include actionArea}
+					{/ifset}
 				</div>
 			</div>
 		</div>
 
 		<div class="wrapper wrapper-content animated fadeInRight">
-			{include content}
+            {include content}
 		</div>
 
 		<div class="footer">
@@ -235,7 +237,7 @@
 <script src="{$basePath}/assets/custom/js/live-form-validation.js"></script>
 <script src="{$basePath}/assets/custom/js/nette.ajax.js"></script>
 
- Datagrid
+Datagrid
 <script src="{$basePath}/assets/custom/bootstrap-datepicker/bootstrap-datepicker.js"></script>
 <script src="{$basePath}/assets/inspinia/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="{$basePath}/assets/custom/datagrid/datagrid.js"></script>

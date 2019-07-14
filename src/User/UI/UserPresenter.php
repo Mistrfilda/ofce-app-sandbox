@@ -19,6 +19,11 @@ class UserPresenter extends SecurePresenter
 		$this->userGridFactory = $userGridFactory;
 	}
 
+	public function renderDefault(): void
+	{
+		$this->pageNavigation->setTitle('Users');
+	}
+
 	protected function createComponentUserGrid(): Datagrid
 	{
 		return $this->userGridFactory->create();

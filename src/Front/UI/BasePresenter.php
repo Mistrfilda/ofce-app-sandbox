@@ -5,17 +5,21 @@ declare(strict_types=1);
 namespace App\Front\UI;
 
 use App\Front\Menu\MenuBuilder;
+use App\Front\Navigation\PageNavigation;
 use App\User\CurrentUserGetter;
 use Nette\Application\UI\InvalidLinkException;
 use Nette\Application\UI\Presenter;
 
-class BasePresenter extends Presenter
+abstract class BasePresenter extends Presenter
 {
 	/**
-	 * @var string
+	 * @var string|null
 	 * @persistent
 	 */
 	public $backlink;
+
+	/** @var PageNavigation */
+	protected $pageNavigation;
 
 	/** @var CurrentUserGetter */
 	protected $currentUserGetter;
@@ -36,7 +40,13 @@ class BasePresenter extends Presenter
 	public function startup(): void
 	{
 		parent::startup();
+		$this->pageNavigation = new PageNavigation();
 		$this->template->menu = (new MenuBuilder())->buildMenu();
+	}
+
+	public function beforeRender(): void
+	{
+		parent::beforeRender();
 	}
 
 	/**
@@ -59,5 +69,10 @@ class BasePresenter extends Presenter
 	{
 		$this->currentUserGetter->logout();
 		$this->redirect('Login:default');
+	}
+
+	public function getNavigation(): PageNavigation
+	{
+		return $this->pageNavigation;
 	}
 }

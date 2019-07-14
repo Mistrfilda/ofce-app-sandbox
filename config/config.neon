@@ -22,11 +22,14 @@ session:
 	expiration: 14 days
 
 dbal:
+	debug:
+		panel: %debugMode%
 	connection:
 		host: %database.host%
 		user: %database.user%
 		password: %database.password%
 		dbname: %database.dbname%
+		driver: 'pdo_mysql'
 
 migrations:
     table: doctrine_migrations

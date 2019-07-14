@@ -13,4 +13,4 @@ install:
 script:
   - composer lint
   - composer stan
-  - composer sniffer
+  - composer cs

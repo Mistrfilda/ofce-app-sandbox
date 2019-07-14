@@ -23,7 +23,10 @@ class LoginPresenter extends BasePresenter
 	{
 		$onSuccess = function (): void {
 			$this->flashMessage('Successfully logged in', FlashMessageType::SUCCESS);
-			$this->restoreRequest($this->backlink);
+			if ($this->backlink !== null) {
+				$this->restoreRequest($this->backlink);
+			}
+
 			$this->redirect('Homepage:default');
 		};
 

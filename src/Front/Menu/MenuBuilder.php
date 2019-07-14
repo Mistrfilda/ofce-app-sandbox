@@ -12,7 +12,7 @@ class MenuBuilder
 	public function buildMenu(): array
 	{
 		return [
-			'homepage' => new MenuItem('Homepage', 'default', 'users', 'Homebvcxbcxvpage'),
+			'homepage' => new MenuItem('Homepage', 'default', 'users', 'Dashboard'),
 			'user' => new MenuItem('User', 'default', 'users', 'Users'),
 			'right' => new MenuItem('Right', 'default', 'users', 'Rights'),
 			'notification' => new MenuItem('Notification', 'default', 'users', 'Notifications'),
