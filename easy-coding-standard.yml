@@ -77,11 +77,9 @@ parameters:
 
   skip:
     PhpCsFixer\Fixer\Import\SingleImportPerStatementFixer: ~
+    PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer: ~
+    Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer: ~
+    PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer: ~
 
   exclude_files:
     - src/Front/Form/Input/DatetimePicker.php
-
-  exclude_checkers:
-    - PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer
-    - Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer
-    - PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer

@@ -14,8 +14,10 @@ extensions:
 	dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
 	orm: Nettrine\ORM\DI\OrmExtension
 	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
+	nettrine.annotations: Nettrine\Annotations\DI\AnnotationsExtension
 	orm.console: Nettrine\ORM\DI\OrmConsoleExtension
 	migrations: Nettrine\Migrations\DI\MigrationsExtension
+	orm.cache: Nettrine\Cache\DI\CacheExtension
 
 
 session:
